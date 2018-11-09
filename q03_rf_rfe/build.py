@@ -7,7 +7,7 @@ data = pd.read_csv('data/house_prices_multivariate.csv')
 from sklearn.feature_selection import RFE
 from sklearn.ensemble import RandomForestClassifier
 
-def rf_rfe(data) :
+def rf_rfe(data):
     X = data.drop('SalePrice', axis=1)
     Y = data['SalePrice']
     #use linear regression as the model
@@ -23,6 +23,8 @@ def rf_rfe(data) :
         if i ==1 :
             ilist.append(j)
     return ilist
+
+
 
 
 
